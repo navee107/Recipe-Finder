@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder - Discover Delicious Recipes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-utensils"></i>
+                    <h1>Recipe Finder</h1>
+                </div>
+                <nav class="nav">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Search Section -->
+            <section class="search-section">
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Search for recipes..." autocomplete="off">
+                    </div>
+                    <div class="filter-container">
+                        <select id="categoryFilter">
+                            <option value="all">All Categories</option>
+                            <option value="Main Course">Main Course</option>
+                            <option value="Dessert">Dessert</option>
+                            <option value="Appetizer">Appetizer</option>
+                            <option value="Breakfast">Breakfast</option>
+                            <option value="Salad">Salad</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Info -->
+            <section class="results-info">
+                <p id="resultsCount">Showing all recipes</p>
+            </section>
+
+            <!-- Recipe Cards -->
+            <section class="recipes-section">
+                <div class="recipes-grid" id="recipesGrid">
+                    <!-- Recipe cards will be dynamically inserted here -->
+                </div>
+                <div class="no-results" id="noResults" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <h3>No recipes found</h3>
+                    <p>Try adjusting your search terms or browse all categories.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Recipe Finder. Made with <i class="fas fa-heart"></i> for food lovers.</p>
+        </div>
+    </footer>
+
+    <!-- Recipe Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <div class="modal-header">
+                <button class="modal-close" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+                <button class="favorite-btn" id="favoriteBtn">
+                    <i class="far fa-heart"></i>
+                </button>
+            </div>
+            <div class="modal-content" id="modalContent">
+                <!-- Recipe details will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
